@@ -1,0 +1,31 @@
+AllCops:
+  TargetRubyVersion: 2.4
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Lint/HandleExceptions:
+  Exclude:
+    - 'bin/rails'
+    - 'bin/rake'
+
+# Configuration parameters: AllowURI, URISchemes.
+ClassLength:
+  Max: 150
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/LineLength:
+  Max: 113
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
