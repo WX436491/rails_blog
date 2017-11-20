@@ -1,4 +1,4 @@
 class Account < ApplicationRecord
-  validates :subdomain, exclusion: { in: %w(www us ca jp),
-    message: "%{value} is reserved." }
+  validates :password, confirmation: true,
+    unless: Proc.new { |a| a.password.blank? }
 end
